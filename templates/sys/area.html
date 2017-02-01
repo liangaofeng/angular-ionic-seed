@@ -1,0 +1,45 @@
+<div class="row about-row bg-colorWt">
+    <div class="row area-row">
+        <div class="col col-25 col-center" style="background-color: #ffffff;border: 0">所在地区：</div>
+        <div class="col area-col" ng-click="openPopover($event,0)">
+            {{getAreaName(0)}} <i class="icon ion-ios-arrow-down"></i>
+        </div>
+
+        <div class="col area-col" ng-click="openPopover($event,1)">
+            {{getAreaName(1)}} <i class="icon ion-ios-arrow-down"></i>
+        </div>
+        <div class="col area-col" ng-click="openPopover($event,2)">
+            {{getAreaName(2)}} <i class="icon ion-ios-arrow-down"></i>
+        </div>
+        <script id="my-popover.html" type="text/ng-template">
+            <ion-popover-view class="my-area-popover">
+                <ion-header-bar>
+                    <h1 class="title">请选择{{typesAlert[typesIndex]}}</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <div class="list" ng-if="typesIndex === 0">
+                        <div class="item" ng-repeat="province in base.province" ng-click="selectArea(province.ID,1)">{{province.Name}}</div>
+                    </div>
+                    <div class="list" ng-if="typesIndex === 1">
+                        <div class="item" ng-repeat="city in base.city" ng-click="selectArea(city.ID,2)">{{city.Name}}</div>
+                    </div>
+                    <div class="list" ng-if="typesIndex === 2">
+                        <div class="item" ng-repeat="district in base.district" ng-click="selectArea(district.ID,3)">{{district.Name}}</div>
+                    </div>
+                </ion-content>
+            </ion-popover-view>
+        </script>
+    </div>
+
+</div>
+
+<style>
+    .myArea .row{
+        text-align: center;
+    }
+    .my-area-popover {
+        height: 70%!important;
+    }
+</style>
+
+

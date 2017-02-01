@@ -1,0 +1,16 @@
+.loading span{
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 4px;
+}
+.loading{
+    background-color: rgba(0,0,0,0)!important;
+}
+
+.my-spinner svg {
+    width: 80px !important;
+    height: 80px !important;
+}
+img {
+    max-width: 100%;
+}
