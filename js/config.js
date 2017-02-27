@@ -2,8 +2,8 @@ define([], function () {
     var config = {
         "version": '1.0.0',
         "name":'项目名称',
-        "host": 'http://api.run.qzswm.com/',
-        "dataServiceUrl": 'http://api.run.qzswm.com/api',
+        "host": 'http://**.com/',
+        "dataServiceUrl": 'http://*/api',
         "testHost": 'http://localhost',
         "testDataServiceUrl": '../api',
         "lazyImage": 'img/lazy.png',
